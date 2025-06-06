@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://taqat-api-33wara.vercel.app/api/$1"
+    }
+  ]
+}

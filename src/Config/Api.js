@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const baseURL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+export const ApiLink = "/api"; // تغيير إلى مسار نسبي
+export const LocalApi = "http://localhost:5000";
 
 const Api = axios.create({
-    baseURL,
+    baseURL: ApiLink,
     headers: {
         'Content-Type': 'application/json',
     },
