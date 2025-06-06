@@ -1,13 +1,11 @@
-import axios from 'axios'
+import axios from 'axios';
 
-export const ApiLink = "https://taqat-api-33wara.vercel.app"
-export const LocalApi = "http://localhost:5000"
+const baseURL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 const Api = axios.create({
-    baseURL: ApiLink ,
+    baseURL,
     headers: {
         'Content-Type': 'application/json',
-        // 'Accept': 'application/json',
     },
     withCredentials: true,
 });
